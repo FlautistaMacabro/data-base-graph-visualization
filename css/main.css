@@ -1,0 +1,94 @@
+* {
+  outline: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: floralwhite;
+}
+
+h1 {
+  color: floralwhite;
+}
+
+input {
+  color: floralwhite;
+}
+
+button {
+  background: none;
+  border: none;
+  color: floralwhite;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: floralwhite;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 100% auto;
+  width: 100%;
+}
+
+.bttcarregarscript {
+  font-size: medium;
+  font-weight: 400;
+  border-radius: 0 10px 0 10px;
+  background-color: rgba(190, 65, 221, 0.6);
+  box-shadow: 5px 8px rgba(166, 36, 206, 0.486);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.bttcarregarscript:hover {
+  background-color: rgba(166, 36, 206, 0.486);
+  box-shadow: 5px 8px rgba(151, 27, 189, 0.541);
+}
+.bttcarregarscript:active {
+  background-color: rgba(151, 27, 189, 0.541);
+  box-shadow: 5px 8px rgba(148, 24, 185, 0.616);
+}
+
+.bttcarregarscript:disabled,
+.bttcarregarscript[disabled] {
+  background-color: transparent;
+  box-shadow: transparent transparent transparent;
+}
+
+.divcentralizar {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  justify-content: center;
+  justify-content: center;
+}
+
+#bttcarregargrafo {
+  width: 8vw;
+  height: 50px;
+  font-size: large;
+  font-weight: 400;
+  border-radius: 0 10px 0 10px;
+  background-color: rgba(190, 65, 221, 0.6);
+  box-shadow: 5px 8px rgba(166, 36, 206, 0.486);
+  cursor: pointer;
+  transition: 0.2s;
+}
+#bttcarregargrafo:hover {
+  background-color: rgba(166, 36, 206, 0.486);
+  box-shadow: 5px 8px rgba(151, 27, 189, 0.541);
+}
+#bttcarregargrafo:active {
+  background-color: rgba(151, 27, 189, 0.541);
+  box-shadow: 5px 8px rgba(148, 24, 185, 0.616);
+}
+
+#divgeral {
+  background-color: rgba(207, 103, 221, 0.49);
+}/*# sourceMappingURL=main.css.map */

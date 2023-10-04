@@ -1,0 +1,64 @@
+@import 'base';
+
+$boxShadowBttSize1: 5px;
+$boxShadowBttSize2: 8px;
+
+main {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 100% auto;
+  width: 100%;
+}
+
+.bttcarregarscript {
+  font-size: medium;
+  font-weight: 400;
+  border-radius: 0 10px 0 10px;
+  background-color: $roxoEscuro3;
+  box-shadow: $boxShadowBttSize1 $boxShadowBttSize2 $roxoEscuroForte;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+      background-color: $roxoEscuroForte;
+      box-shadow: $boxShadowBttSize1 $boxShadowBttSize2 $roxoEscuroForte2;
+  }
+  &:active {
+      background-color: $roxoEscuroForte2;
+      box-shadow: $boxShadowBttSize1 $boxShadowBttSize2 $roxoEscuroForte3;
+  }
+}
+
+.bttcarregarscript:disabled,
+.bttcarregarscript[disabled]{
+  background-color: transparent;
+  box-shadow:  transparent transparent transparent;
+}
+
+.divcentralizar{
+  @include CenterFlexRowDiv;
+  justify-content: center;
+}
+
+#bttcarregargrafo {
+  width: 8vw;
+  height: 50px;
+  font-size: large;
+  font-weight: 400;
+  border-radius: 0 10px 0 10px;
+  background-color: $roxoEscuro3;
+  box-shadow: $boxShadowBttSize1 $boxShadowBttSize2 $roxoEscuroForte;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+      background-color: $roxoEscuroForte;
+      box-shadow: $boxShadowBttSize1 $boxShadowBttSize2 $roxoEscuroForte2;
+  }
+  &:active {
+      background-color: $roxoEscuroForte2;
+      box-shadow: $boxShadowBttSize1 $boxShadowBttSize2 $roxoEscuroForte3;
+  }
+}
+
+#divgeral{
+  background-color: $rosaEscuro;
+}

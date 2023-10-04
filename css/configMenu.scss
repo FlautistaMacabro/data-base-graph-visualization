@@ -1,0 +1,99 @@
+@import 'base';
+
+$marginLeft: 60.7vw;
+$widthConf: 39.3vw;
+
+$iconsMenuConfgSize: 45px;
+
+#divopentestarea {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  margin-top: 20vh;
+  margin-bottom: 70vh;
+  border-radius: 20px 0px 0px 20px;
+  background-color: $roxoEscuroForte;
+  transition: 0.2s;
+  &:hover{
+      background-color: $roxoEscuroForte2;
+      cursor: pointer;
+  }
+  &:active{
+      background-color: $roxoEscuroForte3;
+  }
+  position: absolute;
+}
+
+#bttopentestarea {
+  font-size: medium;
+  padding-right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  &::before{
+    content: "⪼ Configuração";
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+#divmenuconfg{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  place-items: center;
+  width: 100%;
+  height: 9vh;
+  margin-bottom: 2vh;
+}
+
+#divcontentconfg{
+  display: grid;
+  grid-template-rows: 3vh 15vh 33vh 27vh auto;
+  padding-left: 18px;
+}
+
+.divopentestarea {
+  margin-left: $marginLeft - 10.1vw;
+}
+
+.divcontenttestarea {
+  width: $widthConf;
+  padding-left: 0;
+  display: block;
+  transition: 0.3s;
+  background-color: $roxoEscuroForte;
+  transition: 0.3s;
+  position: absolute;
+  margin-left: $marginLeft;
+  height: 100%;
+}
+
+.diviconmenuconfg {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  place-items: center;
+  transition: 0.2s;
+  &:hover {
+    background-color: $roxoEscuro3;
+    cursor: pointer;
+  }
+}
+
+.iconsmenuconfg{
+  width: $iconsMenuConfgSize;
+  height: $iconsMenuConfgSize;
+}
+
+// Para mudanças
+
+.display {
+  width: 0;
+  transition: 0.3s;
+}
+
+.content::before{display: none;}
+.content::after {content: "⪻ Configuração";}
+
+.marginBtt { margin-left: calc($marginLeft + ($widthConf * 0.743)); }
