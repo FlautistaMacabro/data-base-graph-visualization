@@ -10,6 +10,33 @@ main {
   width: 100%;
 }
 
+select {
+  color: $fontColor;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: $roxoEscuroForte;
+  border-width: 0;
+  border-radius: 8px;
+}
+
+input[type=file]::file-selector-button {
+  color: $fontColor;
+  font-size: 15px;
+  font-weight: 400;
+  border-width: 0;
+  padding: 5px;
+  border-radius: 0 10px 0 10px;
+  background-color: $roxoEscuro3;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+      background-color: $roxoEscuroForte;
+  }
+  &:active {
+      background-color: $roxoEscuroForte2;
+  }
+}
+
 .bttcarregarscript {
   font-size: medium;
   font-weight: 400;
@@ -30,8 +57,10 @@ main {
 
 .bttcarregarscript:disabled,
 .bttcarregarscript[disabled]{
-  background-color: transparent;
+  background-color: $roxoEscuro3-trans;
   box-shadow:  transparent transparent transparent;
+  color: $fontColor-trans;
+  cursor: default;
 }
 
 .divcentralizar{
@@ -61,4 +90,12 @@ main {
 
 #divgeral{
   background-color: $rosaEscuro;
+  cursor: grab;
+  &:active{
+    cursor: grabbing;
+  }
+}
+
+.active{
+  background-color: $roxoEscuro3;
 }

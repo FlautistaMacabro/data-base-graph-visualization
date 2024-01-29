@@ -37,6 +37,33 @@ main {
   width: 100%;
 }
 
+select {
+  color: floralwhite;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: rgba(166, 36, 206, 0.486);
+  border-width: 0;
+  border-radius: 8px;
+}
+
+input[type=file]::file-selector-button {
+  color: floralwhite;
+  font-size: 15px;
+  font-weight: 400;
+  border-width: 0;
+  padding: 5px;
+  border-radius: 0 10px 0 10px;
+  background-color: rgba(190, 65, 221, 0.6);
+  cursor: pointer;
+  transition: 0.2s;
+}
+input[type=file]::file-selector-button:hover {
+  background-color: rgba(166, 36, 206, 0.486);
+}
+input[type=file]::file-selector-button:active {
+  background-color: rgba(151, 27, 189, 0.541);
+}
+
 .bttcarregarscript {
   font-size: medium;
   font-weight: 400;
@@ -57,8 +84,10 @@ main {
 
 .bttcarregarscript:disabled,
 .bttcarregarscript[disabled] {
-  background-color: transparent;
+  background-color: rgba(190, 65, 221, 0.281);
   box-shadow: transparent transparent transparent;
+  color: rgba(255, 250, 240, 0.685);
+  cursor: default;
 }
 
 .divcentralizar {
@@ -91,4 +120,12 @@ main {
 
 #divgeral {
   background-color: rgba(207, 103, 221, 0.49);
+  cursor: grab;
+}
+#divgeral:active {
+  cursor: grabbing;
+}
+
+.active {
+  background-color: rgba(190, 65, 221, 0.6);
 }/*# sourceMappingURL=main.css.map */

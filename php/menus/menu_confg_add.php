@@ -6,7 +6,7 @@
   <h2> Configurações adicionais </h2>
 </div>
 <div>
-  <h3>Insira um novo registro raiz de mesma tabela e atributo:</h3>
+  <h3>Insira um novo registro Raiz de mesma tabela e atributo:</h3>
   <form method="POST" action="php/consultNewNode.php">
     <label for="registroRaiz">Escolha outro registro raiz:</label>
     <?php if(isset($_SESSION['registrosDisponiveisRestantes'])): ?>
@@ -33,7 +33,7 @@
       <button class="bttcarregarscript" type="submit" disabled> Carregar Registro </button>
     <?php endif; ?>
   </form>
-  <h3>Insira um outro atributo relacionado para a raiz escolhida:</h3>
+  <h3>Insira um outro atributo relacionado para a Raiz escolhida:</h3>
   <form method="POST" action="php/consultNewData.php">
     <label for="atributoRelacionado">Escolha um atributo relacionado:</label>
     <?php if(isset($_SESSION['atributosRelacionadosRestantes'])): ?>

@@ -30,7 +30,7 @@ if(!is_numeric($registrosRelacionados[0])){
 
 // Obtendo os relacionamentos entre os atributos
 for ($i=0; $i < $registrosRelacionadosSize; $i++){
-  $query = "SELECT {$atributoNovo} FROM {$tabelaRelacionada} WHERE {$atributoRelacionado} = {$registrosRelacionadosNaoNumerico[$i]};";
+  $query = "SELECT {$atributoNovo} FROM {$tabelaRelacionada} WHERE {$atributoRelacionado} like {$registrosRelacionadosNaoNumerico[$i]};";
   $result = $conexao->query($query);
   if($result)
     while($row = $result->fetch_assoc()){

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "cytoscape": "^3.28.0",
+    "cytoscape-panzoom": "^2.5.3"
+  }
+}

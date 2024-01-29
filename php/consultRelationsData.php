@@ -12,6 +12,7 @@ $atributoRelacionado = $_SESSION['atributoRelacionado'];
 $tabelaRelacionada = $_SESSION['tabelaRelacionada'];
 
 // Verificando se o registro é numérico
+$valorRaizNaoNumerico = $valorRaiz;
 if(!is_numeric($valorRaiz))
   $valorRaizNaoNumerico = "'{$valorRaiz}'";
 
@@ -30,7 +31,7 @@ if(in_array($tabelaRelacionada, $_SESSION['tabelasRelacionadas_1n'])){
   $query = "SELECT {$tabelaRelacionada}.{$atributoRelacionado} from {$tabelaRelacionada}
     inner join {$entidadeRaiz}
     on {$tabelaRelacionada}.{$tabelaRelacionadaFK} = {$entidadeRaiz}.{$tabelaRaizPK}
-  where {$entidadeRaiz}.{$atributoRaiz} = {$valorRaizNaoNumerico}
+  where {$entidadeRaiz}.{$atributoRaiz} like {$valorRaizNaoNumerico}
   GROUP BY {$tabelaRelacionada}.{$atributoRelacionado}
   ORDER BY {$tabelaRelacionada}.{$atributoRelacionado} ASC";
 
@@ -48,7 +49,7 @@ if(in_array($tabelaRelacionada, $_SESSION['tabelasRelacionadas_1n'])){
   $query = "SELECT {$tabelaRelacionada}.{$atributoRelacionado} from {$tabelaRelacionada}
     inner join {$entidadeRaiz}
     on {$tabelaRelacionada}.{$tabelaRelacionadaPK} = {$entidadeRaiz}.{$tabelaRaizFK}
-  where {$entidadeRaiz}.{$atributoRaiz} = {$valorRaizNaoNumerico}
+  where {$entidadeRaiz}.{$atributoRaiz} like {$valorRaizNaoNumerico}
   GROUP BY {$tabelaRelacionada}.{$atributoRelacionado}
   ORDER BY {$tabelaRelacionada}.{$atributoRelacionado} ASC";
 
@@ -82,7 +83,7 @@ if(in_array($tabelaRelacionada, $_SESSION['tabelasRelacionadas_1n'])){
     on {$tabelaRelacionada}.{$chaveRelacionada} = {$tabelaRelacionamento}.{$chaveRelacionamento}
       inner join {$entidadeRaiz}
       on {$tabelaRelacionamento}.{$chaveRelacionamentoRaiz} = {$entidadeRaiz}.{$chaveRaiz}
-  where {$entidadeRaiz}.{$atributoRaiz} = {$valorRaizNaoNumerico}
+  where {$entidadeRaiz}.{$atributoRaiz} like {$valorRaizNaoNumerico}
   GROUP BY {$tabelaRelacionada}.{$atributoRelacionado}
   ORDER BY {$tabelaRelacionada}.{$atributoRelacionado} ASC";
 }
@@ -143,6 +144,8 @@ require_once 'consultAvaliableNodes.php';
 // Apagar nós e arestas já salvos pelas secções anteriores das configurações adicionais
 unset($_SESSION['registrosNovoAtributoRelacionadoSource']);
 unset($_SESSION['registrosSecundariosRelacionados']);
+
+// echo $query;
 
 header('Location: ../index.php');
 exit();

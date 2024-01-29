@@ -31,12 +31,22 @@ function loadMenuHome(){
 
 function loadMenuConfg(){
     loadMenu('php/menus/menu_confg.php');
+    let menuItems = document.getElementsByClassName("diviconmenuconfg");
+    menuItems[1].classList.remove("active");
+    menuItems[0].classList.add("active");
 }
 
 function loadMenuConfgAdd(){
     loadMenu('php/menus/menu_confg_add.php');
+    let menuItems = document.getElementsByClassName("diviconmenuconfg");
+    menuItems[0].classList.remove("active");
+    menuItems[1].classList.add("active");
 }
 
 function loadMenuStatistics(){
     loadMenu('php/menus/menu_statistics.php');
 }
+
+window.addEventListener("load", () => {
+    document.getElementsByClassName("diviconmenuconfg")[0].classList.add("active");
+});

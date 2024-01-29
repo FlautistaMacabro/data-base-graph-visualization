@@ -24,7 +24,7 @@
 <body>
   <main>
     <div id="divgeral">
-      <?php if(false): ?>
+      <?php if(isset($_SESSION['resultMsg']) && $_SESSION['resultMsg']): ?>
       <h1> <?php echo $_SESSION['resultMsg']; ?> </h1>
       <?php unset($_SESSION['resultMsg']); endif; ?>
       <div id="divautomato">
@@ -38,18 +38,18 @@
     </div>
     <div id="divcontenttestarea" class="divcontenttestarea">
       <div id="divmenuconfg">
-        <div class="diviconmenuconfg" onclick="loadMenuHome()">
+        <!-- <div class="diviconmenuconfg" onclick="loadMenuHome()">
           <img class="iconsmenuconfg" src="images\icons\house.png" alt="Início">
-        </div>
+        </div> -->
         <div class="diviconmenuconfg" onclick="loadMenuConfg()">
-          <img class="iconsmenuconfg" src="images\icons\confg.png" alt="Configurações">
+          <img class="iconsmenuconfg" src="images\icons\confg-white.png" alt="Configurações">
         </div>
         <div class="diviconmenuconfg" onclick="loadMenuConfgAdd()">
-          <img class="iconsmenuconfg" src="images\icons\confg_add.png" alt="Configurações Adicionais">
+          <img class="iconsmenuconfg" src="images\icons\confg_add-white.png" alt="Configurações Adicionais">
         </div>
-        <div class="diviconmenuconfg" onclick="loadMenuStatistics()">
+        <!-- <div class="diviconmenuconfg" onclick="loadMenuStatistics()">
           <img class="iconsmenuconfg" src="images\icons\statistics.png" alt="Estatísticas">
-        </div>
+        </div> -->
       </div>
       <div id="divcontentconfg">
         <?php require_once 'php/menus/menu_confg.php'; ?>
@@ -58,7 +58,10 @@
   </main>
 </body>
 <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.8.5/cytoscape.min.js"> </script>-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.23.0/cytoscape.min.js"> </script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.23.0/cytoscape.min.js"> </script> -->
+<script type="text/javascript" src="node_modules/cytoscape/dist/cytoscape.min.js"></script>
+<!-- <script type="text/javascript" src="node_modules/cytoscape-panzoom/jquery/dist/jquery.min.js"></script> -->
+<script type="text/javascript" src="node_modules/cytoscape-panzoom/cytoscape-panzoom.js"></script>
 <script type="text/javascript" src="js/menuAreaFunctions.js"> </script>
 <script type="text/javascript" src="js/graphVisualization/inicialization.js"> </script>
 <script type="text/javascript" src="js/graphVisualization/manipulationFunctions.js"> </script>
