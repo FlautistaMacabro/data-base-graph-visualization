@@ -1,2 +1,2 @@
-# data-base-graph-visualization
+# Database Graph Visualization
 Relational Data Base Visualization with Graphs
